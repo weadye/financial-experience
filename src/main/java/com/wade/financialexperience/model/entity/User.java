@@ -1,3 +1,10 @@
+/*
+ * Copyright (c)
+ * @author: Wade.Ye
+ * @email: ye_jianquan@126.com
+ * created at 2018/11/25  .
+ */
+
 package com.wade.financialexperience.model.entity;
 
 import javax.persistence.Column;
@@ -22,16 +29,16 @@ public class User {
     private Boolean deleted;
 
     @Column(name = "created_by")
-    private String createdby;
+    private String createdBy;
 
     @Column(name = "created_at")
-    private Date createdat;
+    private Date createdAt;
 
     @Column(name = "changed_by")
-    private String changedby;
+    private String changedBy;
 
     @Column(name = "changed_at")
-    private Date changedat;
+    private Date changedAt;
 
     public Integer getId() {
         return id;
@@ -46,7 +53,7 @@ public class User {
     }
 
     public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+        this.name = name;
     }
 
     public String getPassword() {
@@ -54,7 +61,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
+        this.password = password;
     }
 
     public Boolean getDeleted() {
@@ -65,35 +72,35 @@ public class User {
         this.deleted = deleted;
     }
 
-    public String getCreatedby() {
-        return createdby;
+    public String getCreatedBy() {
+        return createdBy;
     }
 
-    public void setCreatedby(String createdby) {
-        this.createdby = createdby == null ? null : createdby.trim();
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
     }
 
-    public Date getCreatedat() {
-        return createdat;
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreatedat(Date createdat) {
-        this.createdat = createdat;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public String getChangedby() {
-        return changedby;
+    public String getChangedBy() {
+        return changedBy;
     }
 
-    public void setChangedby(String changedby) {
-        this.changedby = changedby == null ? null : changedby.trim();
+    public void setChangedBy(String changedBy) {
+        this.changedBy = changedBy;
     }
 
-    public Date getChangedat() {
-        return changedat;
+    public Date getChangedAt() {
+        return changedAt;
     }
 
-    public void setChangedat(Date changedat) {
-        this.changedat = changedat;
+    public void setChangedAt(Date changedAt) {
+        this.changedAt = changedAt;
     }
 }
