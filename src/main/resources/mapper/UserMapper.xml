@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wade.financialexperience.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.wade.financialexperience.model.entity.User" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="deleted" property="deleted" jdbcType="BIT" />
+    <result column="createdBy" property="created_by" jdbcType="VARCHAR" />
+    <result column="createdAt" property="created_at" jdbcType="TIMESTAMP" />
+    <result column="changedBy" property="changed_by" jdbcType="VARCHAR" />
+    <result column="changedAt" property="changed_at" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, `name`, password, deleted, createdBy, createdAt, changedBy, changedAt
+  </sql>
+</mapper>
