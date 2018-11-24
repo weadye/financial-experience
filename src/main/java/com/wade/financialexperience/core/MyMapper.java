@@ -1,3 +1,10 @@
+/*
+ * Copyright (c)
+ * @author: Wade.Ye
+ * @email: ye_jianquan@126.com
+ * created at 2018/11/25  .
+ */
+
 package com.wade.financialexperience.core;
 
 import tk.mybatis.mapper.common.BaseMapper;

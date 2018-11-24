@@ -1,22 +1,23 @@
+/*
+ * Copyright (c)
+ * @author: Wade.Ye
+ * @email: ye_jianquan@126.com
+ * created at 2018/11/25  .
+ */
+
 package com.wade.financialexperience.configuration;
 
 
-import springfox.documentation.service.Contact;
-import io.swagger.models.parameters.Parameter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
-import springfox.documentation.builders.ParameterBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.schema.ModelRef;
 import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Configuration
 @EnableSwagger2
@@ -36,9 +37,9 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
-                .title("Spring Boot 测试使用 Swagger2 构建RESTful API")
+                .title("Spring Boot使用Swagger2构建RESTful API")
                 //创建人
-                .contact(new Contact("MarryFeng", "http://www.baidu.com", ""))
+                .contact(new Contact("Wade Ye", "https://github.com/weadye", "ye_jianquan@126.com"))
                 //版本号
                 .version("1.0")
                 //描述

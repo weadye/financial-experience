@@ -1,25 +1,28 @@
+
+/*
+ * Copyright (c)
+ * @author: Wade.Ye
+ * @email: ye_jianquan@126.com
+ * created at 2018/11/25  .
+ */
+
 package com.wade.financialexperience.configuration;
-
-import com.github.pagehelper.PageHelper;
-
-import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.github.pagehelper.PageHelper;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
-
 import javax.sql.DataSource;
 import java.util.Properties;
 
-/**
- * Created by kx on 17/4/2.
- */
+
+@Configuration
 public class MyBatisConfig {
     @Bean
     public SqlSessionFactory sqlSessionFactoryBean(DataSource dataSource) throws Exception {

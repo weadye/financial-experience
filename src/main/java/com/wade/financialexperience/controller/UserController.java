@@ -1,3 +1,10 @@
+/*
+ * Copyright (c)
+ * @author: Wade.Ye
+ * @email: ye_jianquan@126.com
+ * created at 2018/11/25  .
+ */
+
 package com.wade.financialexperience.controller;
 
 import com.wade.financialexperience.model.dto.UserCreationDTO;
@@ -12,7 +19,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1/user")
-@Api("swaggerDemoController相关的api")
+@Api("User Controller相关的api")
 public class UserController {
     @Autowired
     private UserService userService;
@@ -34,7 +41,7 @@ public class UserController {
     }
     @ApiOperation(value = "log in", notes = "log in")
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public Integer login(@RequestParam(required = false) String name, @PathVariable(required = false) String password ) {
-        return 1;
+    public String login(@RequestParam(required = false) String name, @RequestParam(required = false) String password ) {
+        return userService.login(name, password);
     }
 }
