@@ -1,0 +1,19 @@
+<!--
+  ~ Copyright (c)
+  ~ @author: Wade.Ye
+  ~ @email: ye_jianquan@126.com
+  ~ created at 2018/11/30  .
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <#assign  user=Session.SPRING_SECURITY_CONTEXT.authentication.principal/>
+</head>
+<body>
+欢迎你,${user.username}<br/>
+<a href="/logout">注销</a>
+</body>
+</html>
