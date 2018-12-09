@@ -37,7 +37,8 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
-                .title("Spring Boot使用Swagger2构建RESTful API")
+                .title("Financial Experience Swagger2 RESTful API")
+                .termsOfServiceUrl("/test/test")
                 //创建人
                 .contact(new Contact("Wade Ye", "https://github.com/weadye", "ye_jianquan@126.com"))
                 //版本号

@@ -59,7 +59,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/api/v1/**").permitAll().
                 antMatchers(
                         HttpMethod.POST,
-                        "/register").permitAll().
+                        "/register",
+                        "/api/v1/user/wechat/login").permitAll().
                 anyRequest().authenticated().
                 /*requestMatchers(
                         (RequestMatcher) request ->
@@ -104,7 +105,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             @Override
             public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
                 User userDetails = (User) authentication.getPrincipal();
-                logger.info("USER : " + userDetails.getName() + " LOGIN SUCCESS !  ");
+                logger.info("USER : " + userDetails.getUsername() + " LOGIN SUCCESS !  ");
                 super.onAuthenticationSuccess(request, response, authentication);
             }
         };

@@ -61,7 +61,7 @@ public class BaseController {
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public void register(@RequestBody UserCreationDTO userInfo ) {
         User user = new User();
-        user.setName(userInfo.getName());
+        user.setUsername(userInfo.getName());
         user.setPassword(userInfo.getPassword());
         //user.setCreatedBy("register");
         userService.save(user);

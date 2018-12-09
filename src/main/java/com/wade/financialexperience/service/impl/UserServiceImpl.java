@@ -39,4 +39,14 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
         }
         return "Password incorrect";
     }
+
+    @Override
+    public void save(User model) {
+
+        User user = userMapper.selectByOpenid(model.getOpenid());
+        if (user != null){
+            throw new RuntimeException("user existed!");
+        }
+        super.save(model);
+    }
 }

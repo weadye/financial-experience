@@ -18,4 +18,6 @@ import org.springframework.stereotype.Component;
 public interface UserMapper extends MyMapper<User> {
 
     User selectByName(String name);
+
+    User selectByOpenid(String openid);
 }
